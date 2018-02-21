@@ -1,12 +1,18 @@
 package com.example.robin.friendsr;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.GridView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
+
+    ArrayList<Friend> friends = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +32,13 @@ public class MainActivity extends AppCompatActivity {
         Friend tyrion = new Friend("Tyrion", "Size doesn't matter", R.drawable.tyrion);
 
         // add all characters to list
+        //friends.add(arya);
         friends.addAll(Arrays.asList(arya, cersei, daenerys, jaime, jon, jorah, margaery, melisandre, sansa, tyrion));
-
+        FriendsAdapter adapter = new FriendsAdapter(this,R.layout.grid_item, friends);
+        GridView gridView = (GridView) findViewById(R.id.gridview);
+        gridView.setAdapter(adapter);
     }
 
-    ArrayList<Friend> friends = new ArrayList<>();
+
+
 }
