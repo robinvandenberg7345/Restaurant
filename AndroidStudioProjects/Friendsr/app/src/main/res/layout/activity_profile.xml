@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@android:color/white"
+    android:clipToPadding="false"
+    android:gravity="top|center"
     android:orientation="vertical"
+    android:paddingVertical="30dp"
     tools:context="com.example.robin.friendsr.ProfileActivity">
 
     <ImageView
@@ -34,8 +38,11 @@
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numStars="5" />
+        android:layout_gravity="bottom|center_horizontal"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:stepSize="0.5" />
 
 </LinearLayout>

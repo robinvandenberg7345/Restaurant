@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,15 +30,16 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
+
+            // put the right profile picture on the right grid item
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.grid_item, parent, false);
-            System.out.println(convertView);
-            ImageView gridbutton = (ImageView) convertView.findViewById(R.id.testje);
-            System.out.println(gridbutton);
-            if (gridbutton != null) {
+            ImageView gridButton = (ImageView) convertView.findViewById(R.id.pic);
+            TextView name = (TextView) convertView.findViewById(R.id.name);
+            if (gridButton != null) {
                 Friend f = (Friend) friends.get(position);
                 int id = f.getDrawableId();
-                //ImageView image = (ImageView) getContext().getResources().getDrawable(id);
-                gridbutton.setImageDrawable(getContext().getResources().getDrawable(id));
+                gridButton.setImageDrawable(getContext().getResources().getDrawable(id));
+                name.setText(f.getName());
             }
             else{
                 System.out.println("NULL");
