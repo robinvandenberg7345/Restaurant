@@ -8,7 +8,7 @@
     tools:context="com.example.robin.friendsr.ProfileActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profilePic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -19,19 +19,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="TextView" />
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/bio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:gravity="center"
         android:text="TextView" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:numStars="5" />
+
 </LinearLayout>
