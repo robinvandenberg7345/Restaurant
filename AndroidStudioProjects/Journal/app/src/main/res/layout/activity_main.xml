@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.robin.journal.MainActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:clickable="true"
+        android:onClick="addButtonClicked"
+        app:backgroundTint="@android:color/darker_gray"
+        app:rippleColor="@android:color/black"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light" />
+</android.support.design.widget.CoordinatorLayout>
