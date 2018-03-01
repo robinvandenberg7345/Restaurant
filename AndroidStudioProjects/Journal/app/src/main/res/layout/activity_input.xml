@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.robin.journal.InputActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:layout_margin="20dp"
+                android:ems="10"
+                android:hint="Title"
+                android:inputType="textCapSentences|textPersonName"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/currenttime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:ems="10"
+                android:hint="Time"
+                android:inputType="datetime" />
+
+            <EditText
+                android:id="@+id/mood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="5dp"
+                android:contentDescription="How were you feeling?"
+                android:ems="10"
+                android:hint="How were you feeling?"
+                android:inputType="textCapWords|textPersonName"
+                android:selectAllOnFocus="false" />
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_marginHorizontal="15dp"
+                android:ems="10"
+                android:hint="Tell me about your day"
+                android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textImeMultiLine|textLongMessage"
+                android:lines="5"
+                android:minLines="5"
+                android:singleLine="false" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="addEntry"
+                app:backgroundTint="@android:color/darker_gray"
+                app:rippleColor="@android:color/black"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
